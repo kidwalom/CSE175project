@@ -209,7 +209,13 @@ public class Layer {
     	
 
 	// PLACE YOUR CODE HERE ...
-
+    	//the one below this is how this instance variable will be filled 
+    	/*Vector v1= ;, v2, vSum;
+    	v1 = v1.difference(v2);
+    	vSum = vSum.sum(v1);
+    	for (int i=0; i<vSum.n; i++){
+    	delta.set(i, n);
+    	} */
     }
 
     // computeHiddenDelta -- Calculate the unit delta values for this hidden
