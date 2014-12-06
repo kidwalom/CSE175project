@@ -202,6 +202,11 @@ public class Layer {
     // computeOutputDelta -- Calculate the unit delta values for this
     // output layer.
     public void computeOutputDelta() {
+    	//this is hypotetically where the calculation is stored\
+    	//although its not supposed to take in any parameters
+    	//notsureaboutthat.jpeg *DELETE THIS BEFORE SUBMISSION
+    	//delta.outerProduct(v);
+    	
 
 	// PLACE YOUR CODE HERE ...
 
