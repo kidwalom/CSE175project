@@ -157,7 +157,7 @@ public class Layer {
 	bias.randomize(min, max);
     }
 
-    // loadInput -- Load the given vector of values into the activation 
+    // loadInput -- Load the given vector of values into the activation
     // vector for this layer.  This allows this layer to act as an input
     // layer.  Return false on error.
     public boolean loadInput(Vector v) {
@@ -202,15 +202,41 @@ public class Layer {
     // computeOutputDelta -- Calculate the unit delta values for this
     // output layer.
     public void computeOutputDelta() {
+    	//this is hypotetically where the calculation is stored\
+    	//although its not supposed to take in any parameters
+    	
+    	//delta.outerProduct(v)= targ
+    	
 
 	// PLACE YOUR CODE HERE ...
+    	//the one below this is how this instance variable will be filled 
+    	Vector diff = new Vector(n,0.0);
+    	Vector dirv = new Vector(n,0.0);
+    	diff = targ.difference(act);
+    	dirv = net.derivative(min,max);
+    	for(int i=0; i< n; i++){
+    		delta.set(i,v1.get(i*v2.get(i)));
+    	}
+    	/*vSum = vSum.sum(v1);
+    	for (int i=0; i<vSum.n; i++){
+    	delta.set(i, n);
+    	} */
 
     }
 
     // computeHiddenDelta -- Calculate the unit delta values for this hidden
     // layer.
     public void computeHiddenDelta() {
-
+    	Vector diff = new Vector(n,0.0);
+    	Vector dirva = new Vector(n,0.0);
+    	diff = targ.difference(act);
+    	dirva = net.derivative(min,max);
+    	for (projection p: outputs){
+    		diff = diff.sum((p.W.transpose().product(p.output.delta)));
+    	}
+    	for(int i=0; i< n; i++){
+    		delta.set(i,v1.get(i*v2.get(i)));
+    	}
 	// PLACE YOUR CODE HERE ...
 
     }
@@ -221,7 +247,7 @@ public class Layer {
 	    // This is an output layer ...
 	    computeOutputDelta();
 	} else {
-	    // No point in computing unit delta values for input layers, 
+	    // No point in computing unit delta values for input layers,
 	    // as those values are not used ...
 	    if (!(inputs.isEmpty())) {
 		// This is a hidden layer ...
@@ -246,4 +272,3 @@ public class Layer {
 
 
 }
-
