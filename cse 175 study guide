@@ -1,0 +1,51 @@
+heruistic search 
+-should be the same as midtwerm
+-1 piece ouszzle 
+	-crreate a funcion to solve 15 piece puzzle
+-take the mazium value or any given state and use them as the value of that state 
+
+propsotional logic 
+-similar to the midterm
+-valid unsatifianle or niether
+	-turth table if i feel unceomfortable 
+-entialment
+	-infernece procedure
+	-everything copnfirmed is entailed 
+	-everythign entailed will be infered
+first order logic 
+	-converting english sentnce into renglish logice
+	-denfinitions
+		-starts with for all and "if and only if"
+	-exactly one of somthing qwihtout of uniqueness quantifier
+	-converting first order logic into CNF
+therom proving 
+	- use it to prove that  sevnctece is valid
+	+ITS ONLY VALID IF YOU CAN PROVE IT WITHOUT A KNOWLEGDE BASE,=if you aks a knoelgde if its true and it is then it is valid in all cases 
+planning 
+	-is STRIPS plpannign complete?
+		-strips is an non interleave plan
+		-they exsist on pursting one sub goal beforew purins any other subgoalsd
+	-LOOK UP ACTION SHCEMA
+	-closed world assumption 
+		- if we do not know if somethign is true {assertively} then it must be false
+	-progressive vs regressive planner
+		-pssve satrts with an itnital stae regresive starts wieth a goal
+		
+decidon theroy
+	-word probelems
+		-multiple diff aotucomes with qautnifable actrions
+		-asked whcih action is best aor has the thighest or biggest acrtion potential utility of all the aciton potential utility 
+	
+belief networks
+	- grenral understanign
+	-see how the arorows and nodes relate
+	- node are depenedent of all of the nodesi n the graph 
+	understand when nodeas are confditonally dependet and when the y are independent of eachohter
+	+IF SOMETHING IS TOUCHING THE OTHER THING THE ARE RELATED: look up MARKOV BLANKET
+machien learning 
+	-unductive leanrtni problem with 10 binary inputs
+	+PECERPTRON CANNOT LEARN A XOR STATEMENT BECAUSE :IT IS NOT LINERALY SEPEREABLE (perceptron can learn thing s fast and easily generalize it )
+	+DESICON TREE LEARNER CAN LEARN  XOR STATEMENTS: (FOR EXPLAANTION LOK UP DESCISON TREE LEANERNER)i
+	+
+computer vison 
+	- 
