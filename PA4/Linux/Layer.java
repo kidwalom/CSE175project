@@ -204,18 +204,18 @@ public class Layer {
     public void computeOutputDelta() {
     	//this is hypotetically where the calculation is stored\
     	//although its not supposed to take in any parameters
-    	
+
     	//delta.outerProduct(v)= targ
-    	
+
 
 	// PLACE YOUR CODE HERE ...
-    	//the one below this is how this instance variable will be filled 
+    	//the one below this is how this instance variable will be filled
     	Vector diff = new Vector(n,0.0);
     	Vector dirv = new Vector(n,0.0);
     	diff = targ.difference(act);
     	dirv = net.derivative(min,max);
     	for(int i=0; i< n; i++){
-    		delta.set(i,v1.get(i*v2.get(i)));
+    		delta.set(i,diff.get(i*dirv.get(i)));
     	}
     	/*vSum = vSum.sum(v1);
     	for (int i=0; i<vSum.n; i++){
@@ -235,7 +235,7 @@ public class Layer {
     		diff = diff.sum((p.W.transpose().product(p.output.delta)));
     	}
     	for(int i=0; i< n; i++){
-    		delta.set(i,v1.get(i*v2.get(i)));
+    		delta.set(i,diff.get(i*dirva.get(i)));
     	}
 	// PLACE YOUR CODE HERE ...
 
